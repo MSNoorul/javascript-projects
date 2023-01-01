@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{scroll-behavior: smooth;}
+ul{
+   list-style:none; 
+}
+a{
+    text-decoration: none;
+}
+.landing{
+    background: linear-gradient(rgba(63, 208, 212, 0.5),rgba(0, 0, 0, 0.7)),
+    url(../scroll/files/hero-bcg.jpeg) center/cover ;
+ 
+}
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+
+}
+.fixed-nav .links a{color: rgb(48, 48, 48);}
+
+nav{
+    padding: 1rem 1.5rem;
+    background-color: white;
+}
+.nav-center button{
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+.nav-center img{
+    height: 50px;
+    
+}
+.nav-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.links a{
+   color: hsl(202, 70%, 56%);
+   display: block;
+   padding: 1rem 0rem;
+   font-size: 1.1rem;
+   text-transform: capitalize;
+   letter-spacing: .2rem;
+   font-weight: bold;
+   
+}
+.links a:hover{
+    color: rgb(53, 126, 126);
+}
+@media screen and (min-width: 800px){
+    nav{background-color: transparent;}
+    .nav-center button{
+        display: none;
+    }
+    .nav-links{height: auto !important;}
+    nav{
+        display: flex;
+        padding: 1rem 4rem;
+        justify-content: space-between;
+    }
+    .links a{margin: 0 1rem;color: white;}
+    .links{display: flex;}
+}
+
+
+/* hero */
+
+
+.banner{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: rgb(255, 239, 239);
+}
+.container h1{
+    text-transform:uppercase;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+}
+.container p{
+
+    max-width: 27rem;
+    margin: 0 auto 3rem;
+    line-height: 1.3rem;
+    font-size: 0.9rem;
+
+}
+.container a{
+    color: aliceblue;
+    text-transform: capitalize;
+    font-size: 1rem;
+    letter-spacing: .3rem;
+    border: 1px solid white;
+    padding: .8rem;
+    transition: .3s;
+}
+.container a:hover{
+    background-color: white;
+    color: rgb(1, 190, 190);
+}
+
+@media screen and (min-width: 800px){
+    .container h1{font-size: 4rem;}
+}
+
+#about,#services,#tours{
+    height: 90vh;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(8, 8, 8, 0.2);
+}
+#services{background-color: whitesmoke;}
+span{color: rgb(0, 194, 194);}
+footer{
+    padding: 60px 20px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    line-height: 1.5rem;
+    background-color: rgb(8, 40, 70);
+}
+.top-link{
+    display: none;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(10, 163, 168);
+    border-radius: 5px;
+    padding: 10px;
+    animation: rotae 3s  infinite ;
+    
+
+}
+.show-link{display: block;}
+@keyframes bouns {
+    0%{transform: scale(.9);}
+    50%{transform: scale(1);}
+    100%{transform: scale(.9);}
+    
+}
+
+@keyframes rotae {
+    0%,35%{transform: rotate(0deg);}
+    40%{transform: rotate(20deg) scale(1.5);}
+    45%{transform: rotate(-20deg) scale(1.5);}
+    50%{transform: rotate(20deg) scale(1.5);}
+    60%{transform: rotate(-20deg) scale(1.5);}
+    60%,100%{transform: rotate(0deg);}
+    
+}
